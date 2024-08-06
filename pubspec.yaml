@@ -15,16 +15,24 @@ dependencies:
   cupertino_icons: ^1.0.2
   # Firebase
   firebase_core: ^2.24.0
-  very_good_analysis: ^5.1.0
+
   connectivity_plus: ^5.0.2
   flutter_dotenv: ^5.1.0
   flutter_screenutil: ^5.9.3
-  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
+  very_good_analysis: ^5.1.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icon/1024.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/app_icon/play_store_512.png"
 
 flutter:
   uses-material-design: true
@@ -32,3 +40,5 @@ flutter:
   assets:
     - .env.dev
     - .env.prod
+    - assets/assets/images/core/
+    - assets/app_icon/
