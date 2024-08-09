@@ -1,0 +1,11 @@
+flutter_native_splash:
+  image: assets/images/core/splash.jpg
+  color: "#42a5f5"
+  android_gravity: fill_vertical|fill_horizontal
+
+  android_12:
+    image: assets/images/core/splash.jpg
+    color: "#42a5f5"
+    android_gravity: fill_vertical|fill_horizontal
+
+
