@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store/core/app/connectivity_controller.dart';
 import 'package:store/core/app/env.variables.dart';
 import 'package:store/core/common/screens/no_network_screen.dart';
+import 'package:store/core/common/style/fonts/font_family_helper.dart';
+import 'package:store/core/common/style/fonts/font_weight_helper.dart';
 
 class StoreApp extends StatelessWidget {
   const StoreApp({super.key});
@@ -14,14 +17,17 @@ class StoreApp extends StatelessWidget {
     return ValueListenableBuilder<bool>(
       valueListenable: ConnectivityController.instance.isConnected,
       builder: (_, isConnected, __) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
-          title: isConnected ? 'Store' : 'No Network',
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-            useMaterial3: true,
+        return ScreenUtilInit(
+          designSize: const Size(375,812),
+          minTextAdapt: true,
+          child: MaterialApp(
+            debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
+            theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              useMaterial3: true,
+            ),
+            home: isConnected ? const HomePage() : const NoNetworkScreen(),
           ),
-          home: isConnected ? const HomePage() : const NoNetworkScreen(),
         );
       },
     );
@@ -38,7 +44,26 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
       ),
       body: const Center(
-        child: Text('Hello, World!'),
+        child: Column(
+          children: [
+            Text(
+              'Hello ...',
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: FontFamilyHelper.PoppinsEnglish,
+                fontWeight: FontWeightHelper.bold,
+              ),
+            ),
+            Text(
+              '.. وليد محمود',
+              style: TextStyle(
+                fontSize: 24,
+                fontFamily: FontFamilyHelper.CairoArbic,
+                fontWeight: FontWeightHelper.bold,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

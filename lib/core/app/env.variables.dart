@@ -12,6 +12,7 @@ class EnvVariable {
     switch (EnvType) {
       case EnvTypeEnum.dev:
         await dotenv.load(fileName: '.env.dev');
+        break;
       case EnvTypeEnum.prod:
         await dotenv.load(fileName: '.env.prod');
     }
