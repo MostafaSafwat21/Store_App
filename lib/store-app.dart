@@ -3,8 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store/core/app/connectivity_controller.dart';
 import 'package:store/core/app/env.variables.dart';
 import 'package:store/core/common/screens/no_network_screen.dart';
-import 'package:store/core/common/style/fonts/font_family_helper.dart';
-import 'package:store/core/common/style/fonts/font_weight_helper.dart';
+import 'package:store/core/routes/app_routes.dart';
 
 class StoreApp extends StatelessWidget {
   const StoreApp({super.key});
@@ -27,6 +26,8 @@ class StoreApp extends StatelessWidget {
               useMaterial3: true,
             ),
             home: isConnected ? const HomePage() : const NoNetworkScreen(),
+            onGenerateRoute: AppRoutes.onGenerateRoute,
+            initialRoute: AppRoutes.testOne,
           ),
         );
       },
@@ -44,26 +45,7 @@ class HomePage extends StatelessWidget {
         title: const Text('Home Page'),
       ),
       body: const Center(
-        child: Column(
-          children: [
-            Text(
-              'Hello ...',
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: FontFamilyHelper.PoppinsEnglish,
-                fontWeight: FontWeightHelper.bold,
-              ),
-            ),
-            Text(
-              '.. وليد محمود',
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: FontFamilyHelper.CairoArbic,
-                fontWeight: FontWeightHelper.bold,
-              ),
-            ),
-          ],
-        ),
+
       ),
     );
   }
