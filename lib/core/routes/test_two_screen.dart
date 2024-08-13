@@ -8,7 +8,7 @@ class TestTwoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.brown,
       appBar: AppBar(
         title: const Text('Test Two Screen'),
       ),
@@ -17,10 +17,10 @@ class TestTwoScreen extends StatelessWidget {
           onPressed: () {
             context.pushName(AppRoutes.testOne);
           },
-          child: const Text(
+          child: Text(
             'Go to Test One Screen',
             style: TextStyle(
-              color: Colors.white,
+              color: context.color.mainColor,
               fontSize: 20,
             ),
           ),

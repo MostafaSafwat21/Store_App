@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:store/core/style/theme/color_extension.dart';
+import 'package:store/core/style/theme/image_extension.dart';
 
 extension ContextExt on BuildContext{
 
-  Future<dynamic> pushName(String routeName, {Object? arguments}) {
+  // Color
+  MyColors get color => Theme.of(this).extension<MyColors>()!;
+
+  // Image
+  MyImages get image => Theme.of(this).extension<MyImages>()!;
+
+  Future<dynamic> pushName(String routeName, {Object? arguments}){
     return Navigator.of(this).pushNamed(routeName, arguments: arguments);
   }
 
