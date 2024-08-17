@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store/core/extensions/context_extension.dart';
+import 'package:store/core/language/lang_keys.dart';
 import 'package:store/core/routes/app_routes.dart';
 
 class TestOneScreen extends StatelessWidget {
@@ -26,6 +27,13 @@ class TestOneScreen extends StatelessWidget {
                   fontSize: 20,
                 ),
               ),
+            ),
+          ),
+          Text(
+            context.translate(LangKeys.appName),
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 40,
             ),
           ),
           Image.asset(context.image.testImage ?? '')

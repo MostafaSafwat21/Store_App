@@ -11,11 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-
-  cupertino_icons: ^1.0.2
+  # Language
+  flutter_localization: ^0.2.1
   # Firebase
   firebase_core: ^2.24.0
 
+  cupertino_icons: ^1.0.2
   connectivity_plus: ^5.0.2
   flutter_dotenv: ^5.1.0
   flutter_screenutil: ^5.9.3
@@ -43,6 +44,8 @@ flutter:
     - .env.prod
     - assets/images/core/
     - assets/app_icon/
+    - lang/ar.json
+    - lang/en.json
 
   fonts:
     # Arbic font
