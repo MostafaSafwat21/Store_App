@@ -11,8 +11,11 @@ extension ContextExt on BuildContext{
   // Image
   MyAssets get image => Theme.of(this).extension<MyAssets>()!;
 
-  //Language
-  String translate(String langkey) {
+  // Style
+  TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
+
+  // Language
+  String translate(String langkey){
     return AppLocalizations.of(this)!.translate(langkey).toString();
   }
 
