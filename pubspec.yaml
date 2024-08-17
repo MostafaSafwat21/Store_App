@@ -15,6 +15,8 @@ dependencies:
   flutter_localization: ^0.2.1
   # Firebase
   firebase_core: ^2.24.0
+  # UI Animate
+  animate_do: ^3.1.2
 
   cupertino_icons: ^1.0.2
   connectivity_plus: ^5.0.2

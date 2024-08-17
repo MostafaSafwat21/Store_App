@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:store/core/common/style/images/app_images.dart';
+import 'package:store/core/style/images/app_images.dart';
 
 class NoNetworkScreen extends StatelessWidget {
   const NoNetworkScreen({super.key});
