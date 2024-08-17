@@ -36,7 +36,7 @@ class TestOneScreen extends StatelessWidget {
               fontSize: 40,
             ),
           ),
-          Image.asset(context.image.testImage ?? '')
+          //Image.asset(context.image.testImage ?? '')
         ],
       ),
     );

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:store/core/language/app_localizations.dart';
 import 'package:store/core/style/theme/color_extension.dart';
-import 'package:store/core/style/theme/image_extension.dart';
+import 'package:store/core/style/theme/asset_extension.dart';
 
 extension ContextExt on BuildContext{
 
@@ -9,7 +9,7 @@ extension ContextExt on BuildContext{
   MyColors get color => Theme.of(this).extension<MyColors>()!;
 
   // Image
-  MyImages get image => Theme.of(this).extension<MyImages>()!;
+  MyAssets get image => Theme.of(this).extension<MyAssets>()!;
 
   //Language
   String translate(String langkey) {

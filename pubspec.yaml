@@ -43,6 +43,9 @@ flutter:
     - .env.dev
     - .env.prod
     - assets/images/core/
+    - assets/images/admin/
+    - assets/images/customer/
+    - assets/svg/
     - assets/app_icon/
     - lang/ar.json
     - lang/en.json
