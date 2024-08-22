@@ -17,6 +17,12 @@ dependencies:
   firebase_core: ^2.24.0
   # UI Animate
   animate_do: ^3.1.2
+  # Bloc
+  flutter_bloc: ^8.1.4
+  # Shared Preferences
+  shared_preferences: ^2.2.2
+  # Freezed
+  freezed_annotation: ^2.4.1
 
   cupertino_icons: ^1.0.2
   connectivity_plus: ^5.0.2
@@ -30,6 +36,9 @@ dev_dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_lints: ^2.0.0
   very_good_analysis: ^5.1.0
+  # Freezed
+  build_runner: ^2.4.9
+  freezed: ^2.4.7
 
 flutter_icons:
   android: true

@@ -23,7 +23,7 @@ class StoreApp extends StatelessWidget {
               title: 'My Store',
               debugShowCheckedModeBanner: EnvVariable.instance.debugMode,
               theme: themeDark(),
-              locale: Locale('ar'),
+              locale: Locale('en'),
               supportedLocales: AppLocalizationsSetup.supportedLocales,
               localizationsDelegates:
               AppLocalizationsSetup.localizationsDelegates,
@@ -45,7 +45,7 @@ class StoreApp extends StatelessWidget {
                 );
               },
               onGenerateRoute: AppRoutes.onGenerateRoute,
-              initialRoute: AppRoutes.testOne,
+              initialRoute: AppRoutes.login,
             ),
           );
         } else {
