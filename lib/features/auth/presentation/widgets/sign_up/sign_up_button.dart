@@ -15,7 +15,7 @@ class SignUpButton extends StatelessWidget {
     return CustomFadeInRight(
       duration: 600,
       child: CustomLinearButton(
-        onPressed: () {},
+        onPressed: (){},
         height: 50.h,
         width: MediaQuery.of(context).size.width,
         child: TextApp(
@@ -23,6 +23,7 @@ class SignUpButton extends StatelessWidget {
           theme: context.textStyle.copyWith(
             fontSize: 18.sp,
             fontWeight: FontWeightHelper.bold,
+            color: Colors.white,
           ),
         ),
       ),
