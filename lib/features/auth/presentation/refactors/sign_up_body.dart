@@ -18,33 +18,33 @@ class SignUpBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+      padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       child: SingleChildScrollView(
         child: Column(
           children: [
             //Dark mode and language
             const DarkAndLangButtons(),
 
-            SizedBox(height: 30.h),
+            SizedBox(height: 12.h),
             // Welcome Info
             AuthTitleInfo(
               title: context.translate(LangKeys.signUp),
               description: context.translate(LangKeys.signUpWelcome),
             ),
 
-            SizedBox(height: 15.h),
+            SizedBox(height: 10.h),
             // User Avater Image
             const UserAvaterImage(),
 
-            SizedBox(height: 20.h),
+            SizedBox(height: 10.h),
             // SignUp TextForm
             const SignUpTextForm(),
 
-            SizedBox(height: 20.h),
+            SizedBox(height: 10.h),
             // SignUp Button
             const SignUpButton(),
 
-            SizedBox(height: 20.h),
+            SizedBox(height: 10.h),
             // Go To Login Screen
             CustomFadeInDown(
               duration: 400,

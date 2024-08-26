@@ -3,12 +3,16 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:store/core/app/bloc_observer.dart';
 import 'package:store/core/app/env.variables.dart';
+import 'package:store/core/di/injection_container.dart';
+import 'package:store/core/service/shared_pref/shared_pref.dart';
 import 'package:store/store-app.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
     await EnvVariable.instance.init(EnvType: EnvTypeEnum.dev);
+    await SharedPref().instantiatePreferences();
     Bloc.observer = AppBlocObserver();
+    await setupInjector();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]
     ).then((_) {
       runApp(const StoreApp());
