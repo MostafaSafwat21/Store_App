@@ -1,3 +1,6 @@
+import 'package:store/core/service/shared_pref/pref_keys.dart';
+import 'package:store/core/service/shared_pref/shared_pref.dart';
+
 class FontFamilyHelper{
   const FontFamilyHelper._();
 
@@ -6,7 +9,7 @@ class FontFamilyHelper{
 
   static String getLocalozedFontFamily() {
     //ToDo: SharedPerferences
-    final currentLanguage = 'ar';
+    final currentLanguage =  SharedPref().getString(PrefKeys.language);
     if (currentLanguage == 'ar'){
       return CairoArbic;
     }else{

@@ -12,7 +12,6 @@ class AuthCustomPainter extends CustomPainter {
       );
     final path = Path();
     _pathChoeses(path, size);
-
     canvas.drawPath(path, paint);
   }
 
